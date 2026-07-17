@@ -2,7 +2,7 @@ import { useEffect, useState, useRef, } from "react";
 import axios from "axios";
 import api from "../../api/axios";
 import "./AdminDashboard.css";
-import { useMusicPlayer } from "../../context/MusicPlayerContext";
+import { useMusicPlayer } from "../../Context/MusicPlayerContext";
 
 
 

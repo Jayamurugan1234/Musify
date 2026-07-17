@@ -1,4 +1,4 @@
-import { useMusicPlayer } from "../context/MusicPlayerContext";
+import { useMusicPlayer } from "../Context/MusicPlayerContext";
 import "./MiniPlayer.css";
 
 function MiniPlayer() {

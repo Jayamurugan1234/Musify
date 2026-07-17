@@ -1,7 +1,7 @@
 import { useRef, useEffect, useState } from "react";
 import axios from "axios";
 import "./Favorites.css";
-import { useMusicPlayer } from "../../context/MusicPlayerContext";
+import { useMusicPlayer } from "../../Context/MusicPlayerContext";
 import { useNavigate } from "react-router-dom";
 
 function Favorites() {

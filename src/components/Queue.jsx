@@ -11,7 +11,7 @@ import {
 } from "@dnd-kit/sortable";
 
 import { CSS } from "@dnd-kit/utilities";
-import { useMusicPlayer } from "../context/MusicPlayerContext";
+import { useMusicPlayer } from "../Context/MusicPlayerContext";
 
 function SortableItem({ song, index, currentSong, playSong, removeFromQueue }) {
   const { attributes, listeners, setNodeRef, transform, transition } =

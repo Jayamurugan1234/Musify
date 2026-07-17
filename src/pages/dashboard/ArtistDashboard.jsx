@@ -1,7 +1,7 @@
 import { useEffect, useState, useRef } from "react";
 import axios from "axios";
 import "./ArtistDashboard.css";
-import { useMusicPlayer } from "../../context/MusicPlayerContext";
+import { useMusicPlayer } from "../../Context/MusicPlayerContext";
 
 function ArtistDashboard() {
   const [data, setData] = useState(null);
@@ -9,7 +9,7 @@ function ArtistDashboard() {
   const [recent, setRecent] = useState([]);
   const [title, setTitle] = useState("");
   const [audio, setAudio] = useState(null);
-  const [image, setImage] = useState(""); // now a URL string, not a file
+  const [image, setImage] = useState(""); 
 
   const audioRef = useRef(null);
 

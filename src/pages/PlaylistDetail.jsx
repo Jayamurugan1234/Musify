@@ -1,7 +1,7 @@
 import { useEffect, useState, useRef } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import api from "../api/axios";
-import { useMusicPlayer } from "../context/MusicPlayerContext";
+import { useMusicPlayer } from "../Context/MusicPlayerContext";
 import "./PlaylistDetail.css";
 
 function PlaylistDetail() {

@@ -1,4 +1,4 @@
-import { useMusicPlayer } from "../context/MusicPlayerContext";
+import { useMusicPlayer } from "../Context/MusicPlayerContext";
 
 function MusicPlayerBar() {
   const { currentSong, isPlaying, togglePlay } = useMusicPlayer();

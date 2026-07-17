@@ -1,7 +1,7 @@
 import { useEffect, useState, useRef } from "react";
 import axios from "axios";
 import "./UserDashboard.css";
-import { useMusicPlayer } from "../../context/MusicPlayerContext";
+import { useMusicPlayer } from "../../Context/MusicPlayerContext";
 import { useNavigate } from "react-router-dom";
 
 function UserDashboard() {
