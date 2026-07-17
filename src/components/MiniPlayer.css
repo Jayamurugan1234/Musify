@@ -1,0 +1,116 @@
+.mini-player {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 90px;
+  background: #181818;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  border-top: 1px solid #2a2a2a;
+  z-index: 999;
+  animation: slideUp 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+  box-shadow: 0 -8px 30px rgba(0,0,0,0.35);
+}
+
+@keyframes slideUp {
+  from { transform: translateY(100%); opacity: 0; }
+  to   { transform: translateY(0); opacity: 1; }
+}
+
+/* LEFT */
+.mini-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 30%;
+  min-width: 0;
+}
+
+.mini-img {
+  width: 55px;
+  height: 55px;
+  border-radius: 6px;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+  transition: transform 0.25s ease;
+}
+
+.mini-left:hover .mini-img {
+  transform: scale(1.05);
+}
+
+.mini-left h4 {
+  margin: 0;
+  font-size: 14px;
+  color: #fff;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.mini-left p {
+  margin: 2px 0 0;
+  font-size: 12px;
+  color: #b3b3b3;
+}
+
+/* CENTER */
+.mini-center {
+  width: 40%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.play-btn {
+  background: #1db954;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 50%;
+  cursor: pointer;
+  color: #000;
+  font-size: 16px;
+  transition: transform 0.15s ease, box-shadow 0.2s ease;
+  box-shadow: 0 3px 10px rgba(29,185,84,0.4);
+}
+
+.play-btn:hover {
+  transform: scale(1.12);
+  box-shadow: 0 4px 16px rgba(29,185,84,0.6);
+}
+
+.time {
+  font-size: 12px;
+  color: #b3b3b3;
+  display: flex;
+  justify-content: space-between;
+  width: 100px;
+  font-variant-numeric: tabular-nums;
+}
+
+input[type="range"] {
+  flex: 1;
+  accent-color: #1db954;
+  cursor: pointer;
+}
+
+
+@media (max-width: 768px) {
+  .mini-player { height: 74px; padding: 0 14px; }
+  .mini-img { width: 44px; height: 44px; }
+  .mini-left h4 { font-size: 13px; }
+  .mini-left p { font-size: 10px; }
+  .mini-center { width: 55%; }
+}
+
+@media (max-width: 480px) {
+  .mini-player { height: 62px; padding: 0 10px; }
+  .mini-left { width: 55%; gap: 8px; }
+  .mini-img { width: 38px; height: 38px; }
+  .mini-left p { display: none; }
+  .mini-center { width: 45%; gap: 6px; }
+  .time { display: none; }
+}
