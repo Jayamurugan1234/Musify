@@ -18,7 +18,7 @@ function ResetPassword() {
 
     try {
       await axios.post(
-        `http://localhost:8000/api/accounts/reset-password/${uid}/${token}/`,
+        `https://musify-backend-67qs.onrender.com/api/accounts/reset-password/${uid}/${token}/`,
         { password }
       );
 

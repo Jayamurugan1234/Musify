@@ -223,7 +223,7 @@ function PlaylistDetail() {
               src={
                 currentSong.cover_image?.startsWith("http")
                   ? currentSong.cover_image
-                  : `http://localhost:8000${currentSong.cover_image}`
+                  : `https://musify-backend-67qs.onrender.com${currentSong.cover_image}`
               }
               alt={currentSong.title}
               className="player-cover"

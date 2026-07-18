@@ -13,7 +13,7 @@ function RecentlyPlayed() {
       const token = localStorage.getItem("access");
 
       const res = await axios.get(
-        "http://localhost:8000/api/music/history/",
+        "https://musify-backend-67qs.onrender.com/api/music/history/",
         {
           headers: {
             Authorization: `Bearer ${token}`,

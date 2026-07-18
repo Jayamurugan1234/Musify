@@ -8,7 +8,7 @@ function ForgotPassword() {
   const handleSubmit = async () => {
     try {
       await axios.post(
-        "http://localhost:8000/api/accounts/forgot-password/",
+        "https://musify-backend-67qs.onrender.com/api/accounts/forgot-password/",
         { email }
       );
 

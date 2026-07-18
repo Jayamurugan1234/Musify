@@ -28,7 +28,7 @@ function RegisterUser() {
     try {
       setLoading(true);
 
-      await axios.post("http://localhost:8000/api/accounts/register/", {
+      await axios.post("https://musify-backend-67qs.onrender.com/api/accounts/register/", {
         ...form,
         role: "user",
       });

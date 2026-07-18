@@ -85,7 +85,7 @@ export const MusicPlayerProvider = ({ children }) => {
     if (!isSameSong) {
       const audioUrl = song.audio_file?.startsWith("http")
         ? song.audio_file
-        : `http://localhost:8000${song.audio_file}`;
+        : `https://musify-backend-67qs.onrender.com${song.audio_file}`;
 
       audio.src = audioUrl;
       audio.load();

@@ -36,7 +36,7 @@ function ArtistDashboard() {
 
     try {
       await axios.post(
-        "http://localhost:8000/api/music/upload/",
+        "https://musify-backend-67qs.onrender.com/api/music/upload/",
         formData,
         {
           headers: {
@@ -68,7 +68,7 @@ function ArtistDashboard() {
   const fetchDashboard = async () => {
     try {
       const res = await axios.get(
-        "http://localhost:8000/api/music/artist/dashboard/",
+        "https://musify-backend-67qs.onrender.com/api/music/artist/dashboard/",
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -86,7 +86,7 @@ function ArtistDashboard() {
   const fetchTopSongs = async () => {
     try {
       const res = await axios.get(
-        "http://localhost:8000/api/music/artist/top-songs/",
+        "https://musify-backend-67qs.onrender.com/api/music/artist/top-songs/",
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -103,7 +103,7 @@ function ArtistDashboard() {
   const deleteSong = async (songId) => {
     try {
       await axios.delete(
-        `http://localhost:8000/api/music/songs/${songId}/delete/`,
+        `https://musify-backend-67qs.onrender.com/api/music/songs/${songId}/delete/`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -134,7 +134,7 @@ function ArtistDashboard() {
   const fetchRecent = async () => {
     try {
       const res = await axios.get(
-        "http://localhost:8000/api/music/artist/recent-uploads/",
+        "https://musify-backend-67qs.onrender.com/api/music/artist/recent-uploads/",
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -277,7 +277,7 @@ function ArtistDashboard() {
 
                     try {
                       await axios.put(
-                        `http://localhost:8000/api/music/songs/${song.id}/update/`,
+                        `https://musify-backend-67qs.onrender.com/api/music/songs/${song.id}/update/`,
                         {
                           title: newTitle,
                         },
@@ -358,7 +358,7 @@ function ArtistDashboard() {
 
                     try {
                       await axios.put(
-                        `http://localhost:8000/api/music/songs/${song.id}/update/`,
+                        `https://musify-backend-67qs.onrender.com/api/music/songs/${song.id}/update/`,
                         {
                           title: newTitle,
                         },
@@ -402,3 +402,4 @@ function ArtistDashboard() {
 }
 
 export default ArtistDashboard;
+

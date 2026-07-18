@@ -35,7 +35,7 @@ function UserDashboard() {
     const fetchSongs = async () => {
       try {
         const res = await axios.get(
-          "http://localhost:8000/api/music/songs/",
+          "https://musify-backend-67qs.onrender.com/api/music/songs/",
           {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -58,7 +58,7 @@ function UserDashboard() {
     const fetchPlaylists = async () => {
       try {
         const res = await axios.get(
-          "http://localhost:8000/api/playlists/",
+          "https://musify-backend-67qs.onrender.com/api/playlists/",
           {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -127,7 +127,7 @@ function UserDashboard() {
     console.log("SONG ID:", songId);
 
     try {
-      const url = `http://localhost:8000/api/playlists/${playlistId}/add-song/`;
+      const url = `https://musify-backend-67qs.onrender.com/api/playlists/${playlistId}/add-song/`;
 
       const res = await axios.post(
         url,
@@ -235,7 +235,7 @@ function UserDashboard() {
                   onClick={async () => {
                     try {
                       const res = await axios.post(
-                        `http://localhost:8000/api/music/songs/${song.id}/like/`,
+                        `https://musify-backend-67qs.onrender.com/api/music/songs/${song.id}/like/`,
                         {},
                         {
                           headers: {
@@ -315,3 +315,4 @@ function UserDashboard() {
 }
 
 export default UserDashboard;
+

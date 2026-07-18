@@ -37,7 +37,7 @@ function Favorites() {
     const fetchFavorites = async () => {
       try {
         const res = await axios.get(
-          "http://localhost:8000/api/music/favorites/",
+          "https://musify-backend-67qs.onrender.com/api/music/favorites/",
           {
             headers: { Authorization: `Bearer ${token}` },
           }
@@ -79,7 +79,7 @@ function Favorites() {
   const removeFavorite = async (songId) => {
     try {
       await axios.post(
-        `http://localhost:8000/api/music/songs/${songId}/unlike/`,
+        `https://musify-backend-67qs.onrender.com/api/music/songs/${songId}/unlike/`,
         {},
         {
           headers: { Authorization: `Bearer ${token}` },
@@ -167,7 +167,7 @@ function Favorites() {
                     src={
                       song.cover_image?.startsWith("http")
                         ? song.cover_image
-                        : `http://localhost:8000${song.cover_image}`
+                        : `https://musify-backend-67qs.onrender.com${song.cover_image}`
                     }
                     alt=""
                     className="favorite-cover"

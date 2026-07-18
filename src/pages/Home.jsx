@@ -36,7 +36,7 @@ function Home() {
 
     try {
       const res = await axios.get(
-        "http://localhost:8000/api/music/songs/",
+        "https://musify-backend-67qs.onrender.com/api/music/songs/",
         {
           headers: { Authorization: `Bearer ${token}` },
         }
@@ -53,7 +53,7 @@ function Home() {
 
     try {
       const res = await axios.get(
-        "http://localhost:8000/api/playlists/",
+        "https://musify-backend-67qs.onrender.com/api/playlists/",
         {
           headers: { Authorization: `Bearer ${token}` },
         }
@@ -70,7 +70,7 @@ function Home() {
 
     try {
       const res = await axios.get(
-        "http://localhost:8000/api/music/liked/",
+        "https://musify-backend-67qs.onrender.com/api/music/liked/",
         {
           headers: { Authorization: `Bearer ${token}` },
         }
@@ -88,7 +88,7 @@ function Home() {
 
     try {
       const res = await axios.get(
-        "http://localhost:8000/api/music/recommendations/",
+        "https://musify-backend-67qs.onrender.com/api/music/recommendations/",
         {
           headers: { Authorization: `Bearer ${token}` },
         }
@@ -106,7 +106,7 @@ function Home() {
 
     try {
       const res = await axios.get(
-        "http://localhost:8000/api/music/trending-recommendation/",
+        "https://musify-backend-67qs.onrender.com/api/music/trending-recommendation/",
         {
           headers: { Authorization: `Bearer ${token}` },
         }
@@ -132,7 +132,7 @@ function Home() {
     const token = localStorage.getItem("access");
 
     await axios.post(
-      `http://localhost:8000/api/music/songs/${songId}/like/`,
+      `https://musify-backend-67qs.onrender.com/api/music/songs/${songId}/like/`,
       {},
       { headers: { Authorization: `Bearer ${token}` } }
     );
@@ -145,7 +145,7 @@ function Home() {
     const token = localStorage.getItem("access");
 
     await axios.post(
-      `http://localhost:8000/api/music/songs/${songId}/unlike/`,
+      `https://musify-backend-67qs.onrender.com/api/music/songs/${songId}/unlike/`,
       {},
       { headers: { Authorization: `Bearer ${token}` } }
     );
@@ -160,7 +160,7 @@ function Home() {
     const token = localStorage.getItem("access");
 
     await axios.post(
-      `http://localhost:8000/api/playlists/${playlistId}/add-song/`,
+      `https://musify-backend-67qs.onrender.com/api/playlists/${playlistId}/add-song/`,
       { song_id: songId },
       { headers: { Authorization: `Bearer ${token}` } }
     );

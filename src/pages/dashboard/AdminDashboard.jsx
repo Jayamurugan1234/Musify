@@ -34,7 +34,7 @@ function AdminDashboard() {
   const fetchDashboard = async () => {
     try {
       const res = await axios.get(
-        "http://localhost:8000/api/music/admin/dashboard/",
+        "https://musify-backend-67qs.onrender.com/api/music/admin/dashboard/",
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -51,7 +51,7 @@ function AdminDashboard() {
   const fetchTopSongs = async () => {
     try {
       const res = await axios.get(
-        "http://localhost:8000/api/music/admin/top-songs/",
+        "https://musify-backend-67qs.onrender.com/api/music/admin/top-songs/",
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -68,7 +68,7 @@ function AdminDashboard() {
   const fetchTopUsers = async () => {
     try {
       const res = await axios.get(
-        "http://localhost:8000/api/music/admin/top-users/",
+        "https://musify-backend-67qs.onrender.com/api/music/admin/top-users/",
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -86,7 +86,7 @@ function AdminDashboard() {
   const fetchTopArtists = async () => {
     try {
       const res = await axios.get(
-        "http://localhost:8000/api/music/admin/top-artists/",
+        "https://musify-backend-67qs.onrender.com/api/music/admin/top-artists/",
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -428,3 +428,4 @@ function AdminDashboard() {
 }
 
 export default AdminDashboard;
+

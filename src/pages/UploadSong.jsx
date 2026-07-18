@@ -46,7 +46,7 @@ function UploadSong() {
       console.log("Uploading song...");
 
       const res = await axios.post(
-        "http://localhost:8000/api/music/upload/",
+        "https://musify-backend-67qs.onrender.com/api/music/upload/",
         formData,
         {
           headers: {
