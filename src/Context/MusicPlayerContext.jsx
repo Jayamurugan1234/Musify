@@ -11,6 +11,7 @@ const MusicPlayerContext = createContext();
 export const MusicPlayerProvider = ({ children }) => {
   const audioRef = useRef(new Audio());
   const audio = audioRef.current; // ✅ IMPORTANT FIX
+  window.debugAudio = audio;
 
   const frameRef = useRef(null);
 
@@ -86,6 +87,8 @@ export const MusicPlayerProvider = ({ children }) => {
       const audioUrl = song.audio_file?.startsWith("http")
         ? song.audio_file
         : `https://musify-backend-67qs.onrender.com${song.audio_file}`;
+
+      console.log("SONG:", song);
       console.log("AUDIO URL:", audioUrl);
 
       audio.src = audioUrl;
